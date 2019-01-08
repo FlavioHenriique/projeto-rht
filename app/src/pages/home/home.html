@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="principal">
+    <ion-title>
+      Projeto RHT
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="sobre()">
+          <ion-icon name="help"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding justify-content-center align-items-center>
+  <br><br>
+
+  <ion-grid>
+    <ion-row justify-content-center align-items-center>
+      <h1 id="title">Projeto RHT</h1>
+    </ion-row>
+  </ion-grid>
+  <br><br>
+  <br><br>
+  <ion-item>
+    <ion-label floating>
+      <ion-icon name="lock"></ion-icon> Código da empresa
+    </ion-label>
+    <ion-input type="number" max="8" [(ngModel)]="codigo"></ion-input>
+  </ion-item>
+
+  <br><br>
+  <br><br>
+  <ion-row justify-content-center align-items-center>
+    <button ion-button large color="principal" (click)="login()">Entrar</button>
+    
+  </ion-row>
+
+  <ion-fab bottom right>
+    <button ion-fab fab-fixed (click)="cadastro()" color="secundaria">
+      <ion-icon name="add" is-active="false" color="dark"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>
