@@ -17,16 +17,13 @@ public class EmpresaController {
     @PostMapping
     public ResponseEntity<Void> salvar(@RequestBody Empresa empresa) {
 
-        if (service.salvar(empresa)) {
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.badRequest().build();
-        }
+        return (service.salvar(empresa)) ? ResponseEntity.ok().build() :
+                ResponseEntity.status(409).build();
     }
 
     @GetMapping(value = "login/{codigo}")
     public ResponseEntity<Empresa> login(@PathVariable int codigo) {
-        Empresa e = service.login(codigo);
+        Empresa e = service.buscar(codigo);
         return (e == null) ? ResponseEntity.noContent().build() : ResponseEntity.ok(e);
     }
 }

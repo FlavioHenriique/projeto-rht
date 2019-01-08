@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage, AlertController } from 'ionic-angular';
 import { SobrePage } from '../sobre/sobre';
 import { CadastroPage } from '../cadastro/cadastro';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -12,8 +13,12 @@ import { CadastroPage } from '../cadastro/cadastro';
 export class HomePage {
 
   private codigo: number;
+  private url: string = "http://localhost:8085/empresas/";
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController,
+    public alertCtrl: AlertController,
+    public http: HttpClient
+  ) {
 
   }
 
@@ -26,12 +31,15 @@ export class HomePage {
   }
 
   login() {
-    if(false){
-      
-      this.alerta("Opa...", "Não foi encontrada uma empresa com o código " + this.codigo + "!");
-    }else{
-      
-    }
+    let busca = this.url + "login/" + this.codigo;
+    this.http.get(busca, { observe: 'response' }).subscribe(res => {
+      if (res.status == 200) {
+        this.alerta("ae ","pegou");
+      }else{
+          this.alerta("Opa...", "Não foi encontrada uma empresa com esse código");
+      }  
+    });
+    
   }
 
   alerta(titulo, msg) {

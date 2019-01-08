@@ -18,7 +18,7 @@ public class EmpresaService {
 
     public boolean salvar(Empresa empresa) {
 
-        if (!repository.findById(empresa.getCodigo()).isPresent()) {
+        if (buscar(empresa.getCodigo()) == null) {
             repository.save(empresa);
             return true;
         } else {
@@ -26,7 +26,7 @@ public class EmpresaService {
         }
     }
 
-    public Empresa login(int codigo) {
+    public Empresa buscar(int codigo) {
         Optional<Empresa> e = repository.findById(codigo);
         return (e.isPresent()) ? e.get() : null;
     }
