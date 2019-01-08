@@ -24,9 +24,9 @@ public class EmpresaController {
         }
     }
 
-    @GetMapping(value = "login")
-    public ResponseEntity<Empresa> login(@RequestBody Empresa empresa) {
-        Empresa e = service.login(empresa);
+    @GetMapping(value = "login/{codigo}")
+    public ResponseEntity<Empresa> login(@PathVariable int codigo) {
+        Empresa e = service.login(codigo);
         return (e == null) ? ResponseEntity.noContent().build() : ResponseEntity.ok(e);
     }
 }

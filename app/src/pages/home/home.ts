@@ -27,6 +27,7 @@ export class HomePage {
 
   login() {
     if(false){
+      
       this.alerta("Opa...", "Não foi encontrada uma empresa com o código " + this.codigo + "!");
     }else{
       
