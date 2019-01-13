@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SobrePageModule } from '../pages/sobre/sobre.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
+import { QuestaoPageModule } from '../pages/questao/questao.module';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
     IonicModule.forRoot(MyApp),
     SobrePageModule,
     HttpClientModule,
-    CadastroPageModule
+    CadastroPageModule,
+    QuestaoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
