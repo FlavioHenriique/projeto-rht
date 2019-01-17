@@ -11,16 +11,22 @@
 
   <h3>{{questao.posicao}}) {{questao.pergunta}}</h3>
   <br><br>
-  <ion-list radio-group>
+  Selecione uma das alternativas:<br><br>
+  <ion-list radio-group [(ngModel)]="selecao">
     <ion-item *ngFor="let opcao of questao.opcoes">
-      <ion-label class="alternativas">{{opcao}}</ion-label>
-      <ion-radio></ion-radio>
+      <ion-label class="alternativas">{{opcao.texto}}</ion-label>
+      <ion-radio value="{{opcao.estrategia}}"></ion-radio>
       <br>
     </ion-item>
   </ion-list>
   <ion-fab bottom right>
     <button ion-fab fab-fixed (click)="proximaQuestao()" color="secundaria" [hidden]="ehUltima()">
-      <ion-icon name="arrow-forward" is-active="false" color="dark"></ion-icon>
+      <ion-icon name="send" is-active="false" color="dark"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-fab bottom right>
+    <button ion-fab fab-fixed (click)="enviarResultado()" color="secundaria" [hidden]="!ehUltima()">
+      <ion-icon name="checkmark" is-active="false" color="dark"></ion-icon>
     </button>
   </ion-fab>
 </ion-content>

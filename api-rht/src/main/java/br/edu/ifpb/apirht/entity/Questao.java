@@ -1,9 +1,6 @@
 package br.edu.ifpb.apirht.entity;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -13,8 +10,8 @@ public class Questao {
     @GeneratedValue
     private int id;
     private String pergunta;
-    @ElementCollection
-    private List<String> opcoes;
+    @OneToMany
+    private List<Opcao> opcoes;
     private int posicao;
 
     public Questao() {
@@ -36,11 +33,11 @@ public class Questao {
         this.pergunta = pergunta;
     }
 
-    public List<String> getOpcoes() {
+    public List<Opcao> getOpcoes() {
         return opcoes;
     }
 
-    public void setOpcoes(List<String> opcoes) {
+    public void setOpcoes(List<Opcao> opcoes) {
         this.opcoes = opcoes;
     }
 

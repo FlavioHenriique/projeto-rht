@@ -35,7 +35,8 @@ export class HomePage {
     let busca = this.url + "login/" + this.codigo;
     this.http.get(busca, { observe: 'response' }).subscribe(res => {
       if (res.status == 200) {
-        this.navCtrl.push(QuestaoPage,{});
+        let empresa = res.body;
+        this.navCtrl.push(QuestaoPage, { 'empresa': empresa });
       } else {
         this.alerta("Opa...", "Não foi encontrada uma empresa com esse código");
       }
@@ -51,5 +52,5 @@ export class HomePage {
     })
       .present();
   }
-o
+
 }
