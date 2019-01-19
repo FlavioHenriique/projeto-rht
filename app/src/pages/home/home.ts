@@ -4,6 +4,8 @@ import { SobrePage } from '../sobre/sobre';
 import { CadastroPage } from '../cadastro/cadastro';
 import { HttpClient } from '@angular/common/http';
 import { QuestaoPage } from '../questao/questao';
+import { GraficoPage } from '../grafico/grafico';
+import { Empresa } from '../../model/Empresa';
 
 
 @Component({
@@ -15,6 +17,7 @@ export class HomePage {
 
   private codigo: number;
   private url: string = "http://localhost:8085/empresas/";
+  private empresa: Empresa = null;
 
   constructor(public navCtrl: NavController,
     public alertCtrl: AlertController,
@@ -43,6 +46,8 @@ export class HomePage {
     });
 
   }
+
+  
 
   alerta(titulo, msg) {
     this.alertCtrl.create({

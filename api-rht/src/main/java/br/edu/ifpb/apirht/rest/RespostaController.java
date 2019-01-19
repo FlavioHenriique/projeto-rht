@@ -1,5 +1,6 @@
 package br.edu.ifpb.apirht.rest;
 
+import br.edu.ifpb.apirht.entity.Grafico;
 import br.edu.ifpb.apirht.entity.Resposta;
 import br.edu.ifpb.apirht.service.RespostaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,10 @@ public class RespostaController {
     public ResponseEntity<List<Resposta>> todas() {
         List<Resposta> respostas = service.todas();
         return (respostas.isEmpty()) ? ResponseEntity.noContent().build() : ResponseEntity.ok(respostas);
+    }
+
+    @GetMapping(value = "/grafico/{empresa}")
+    public ResponseEntity<Grafico> grafico(@PathVariable int empresa) {
+        return ResponseEntity.ok(service.grafico(empresa));
     }
 }

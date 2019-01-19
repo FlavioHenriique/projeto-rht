@@ -10,7 +10,7 @@ public class Resposta {
     private int id;
     @ManyToOne
     private Empresa empresa;
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Estrategia estrategia;
 
     public int getId() {

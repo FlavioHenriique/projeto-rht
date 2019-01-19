@@ -9,7 +9,7 @@ public class Opcao {
     @GeneratedValue
     private int id;
     private String texto;
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Estrategia estrategia;
     @ManyToOne
     private Questao questao;

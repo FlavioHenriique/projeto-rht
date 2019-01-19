@@ -4,6 +4,7 @@ import { Questao } from '../../model/Questao';
 import { HttpClient } from '@angular/common/http';
 import { Empresa } from '../../model/Empresa';
 import { HomePage } from '../home/home';
+import { GraficoPage } from '../grafico/grafico';
 
 @IonicPage()
 @Component({
@@ -49,7 +50,7 @@ export class QuestaoPage {
     console.log(this.selecao);
     this.navCtrl.push(QuestaoPage, {
       "empresa": this.empresa,
-      "posicao":this.questao.posicao,
+      "posicao": this.questao.posicao,
       "questoes": this.questoes,
       "respostas": this.respostas
     });
@@ -67,9 +68,9 @@ export class QuestaoPage {
     let urlResposta = "http://localhost:8085/respostas/";
     this.http.post(urlResposta, resposta, { observe: 'response' }).subscribe(res => {
       if (res.status = 200) {
-        this.alerta('OK', 'Suas respostas foram enviadas!');
-        this.navCtrl.push(HomePage, {})
-        this.navCtrl.popAll();
+        this.alerta('OK, Suas respostas foram enviadas!', this.avaliacao(resposta.estrategia));
+        this.navCtrl.push(GraficoPage, {empresa: this.empresa});
+        //this.navCtrl.popAll();
       }
     });
   }
@@ -100,5 +101,10 @@ export class QuestaoPage {
       }
     }
     return resp;
+  }
+
+  avaliacao(resultado) {
+    return "Segundo suas respostas, a estratégia de resolução de conflito "
+      + "na qual você se encaixa é a " + resultado + "!";
   }
 }

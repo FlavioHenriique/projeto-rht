@@ -10,6 +10,10 @@ import { HomePage } from '../pages/home/home';
 import { SobrePageModule } from '../pages/sobre/sobre.module';
 import { CadastroPageModule } from '../pages/cadastro/cadastro.module';
 import { QuestaoPageModule } from '../pages/questao/questao.module';
+import { GraficoPageModule } from '../pages/grafico/grafico.module';
+import * as HighCharts from 'highcharts';
+import * as HighchartsMore from 'highcharts/highcharts-more';
+
 
 
 @NgModule({
@@ -23,7 +27,8 @@ import { QuestaoPageModule } from '../pages/questao/questao.module';
     SobrePageModule,
     HttpClientModule,
     CadastroPageModule,
-    QuestaoPageModule
+    QuestaoPageModule,
+    GraficoPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
