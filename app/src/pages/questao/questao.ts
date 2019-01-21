@@ -46,14 +46,19 @@ export class QuestaoPage {
   }
 
   proximaQuestao() {
-    this.respostas.push(this.selecao);
-    console.log(this.selecao);
-    this.navCtrl.push(QuestaoPage, {
-      "empresa": this.empresa,
-      "posicao": this.questao.posicao,
-      "questoes": this.questoes,
-      "respostas": this.respostas
-    });
+    if (this.selecao == "") {
+      this.alerta("Opa...", "Selecione alguma opção!");
+    } else {
+      console.log(this.selecao);
+      this.respostas.push(this.selecao);
+      this.navCtrl.push(QuestaoPage, {
+        "empresa": this.empresa,
+        "posicao": this.questao.posicao,
+        "questoes": this.questoes,
+        "respostas": this.respostas
+      });
+    }
+
   }
 
   ehUltima() {
@@ -61,18 +66,24 @@ export class QuestaoPage {
   }
 
   enviarResultado() {
-    let resposta = {
-      'estrategia': this.maisVotado(this.respostas),
-      'empresa': this.empresa
-    };
-    let urlResposta = "http://localhost:8085/respostas/";
-    this.http.post(urlResposta, resposta, { observe: 'response' }).subscribe(res => {
-      if (res.status = 200) {
-        this.alerta('OK, Suas respostas foram enviadas!', this.avaliacao(resposta.estrategia));
-        this.navCtrl.push(GraficoPage, {empresa: this.empresa});
-        //this.navCtrl.popAll();
-      }
-    });
+    if (this.selecao == "") {
+      this.alerta("Opa...", "Selecione alguma opção!");
+    } else {
+      this.respostas.push(this.selecao);
+      let resposta = {
+        'estrategia': this.maisVotado(this.respostas),
+        'empresa': this.empresa
+      };
+      let urlResposta = "http://localhost:8085/respostas/";
+      this.http.post(urlResposta, resposta, { observe: 'response' }).subscribe(res => {
+        if (res.status = 200) {
+          this.alerta('OK, Suas respostas foram enviadas!', this.avaliacao(resposta.estrategia));
+          this.navCtrl.push(GraficoPage, { empresa: this.empresa });
+          //this.navCtrl.popAll();
+        }
+      });
+    }
+
   }
 
   alerta(titulo, msg) {

@@ -29,45 +29,51 @@ export class GraficoPage {
       if (res.status == 200) {
         var myChart = HighCharts.chart('container', {
           chart: {
-            polar: true
+            polar: true,
+            marginBottom: 70
           },
-    
+
           title: {
             text: 'Situação da empresa ' + this.empresa.nome + ' em relação as estratégias de resolução de conflito'
           },
-    
+
           pane: {
             size: '80%'
           },
-    
+
           xAxis: {
             categories: res.body.estrategias,
             tickmarkPlacement: 'on',
             lineWidth: 0
           },
-    
+
           yAxis: {
             gridLineInterpolation: 'polygon',
             lineWidth: 0,
             min: 0,
             labels: false
           },
-    
+
           tooltip: {
             shared: true,
-            pointFormat: '<span style="color:{series.color}">{series.name}: <b>${point.y:,.0f}</b><br/>'
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
           },
-    
+
           series: [{
             name: 'Estratégias de resolução de conflito',
+            type: 'area',
             data: res.body.dados,
             pointPlacement: 'on'
           }]
-    
+
         });
       }
     });
-    
+
+
+  }
+
+  spiderweb(body) {
 
   }
 
