@@ -7,7 +7,7 @@ import { HomePage } from '../home/home';
 import { HttpClient } from '@angular/common/http';
 import { Grafico } from '../../model/Grafico';
 
-HighchartsMore(HighCharts);
+//HighchartsMore(HighCharts);
 
 @IonicPage()
 @Component({

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
+import { Empresa } from '../../model/Empresa';
 
 @IonicPage()
 @Component({
@@ -19,6 +20,10 @@ export class CadastroPage {
   }
 
   cadastrar() {
+    if (this.empresa.nome == "" || this.empresa.codigo == "") {
+      this.alerta("Erro!","Preencha todos os dados da empresa");
+      return;
+    }
     this.http.post(this.url, this.empresa, { observe: 'response' }).subscribe(res => {
       if (res.status == 200) {
         this.alerta("OK", "A empresa " + this.empresa.nome + " foi cadastrada!");

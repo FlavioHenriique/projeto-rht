@@ -35,19 +35,20 @@ export class HomePage {
   }
 
   login() {
-    let busca = this.url + "login/" + this.codigo;
-    this.http.get(busca, { observe: 'response' }).subscribe(res => {
-      if (res.status == 200) {
-        let empresa = res.body;
-        this.navCtrl.push(QuestaoPage, { 'empresa': empresa });
-      } else {
-        this.alerta("Opa...", "Não foi encontrada uma empresa com esse código");
-      }
-    });
-
+    if (this.codigo == null) {
+      this.alerta("Erro!", "Digite um código para a empresa");
+    } else {
+      let busca = this.url + "login/" + this.codigo;
+      this.http.get(busca, { observe: 'response' }).subscribe(res => {
+        if (res.status == 200) {
+          let empresa = res.body;
+          this.navCtrl.push(QuestaoPage, { 'empresa': empresa });
+        } else {
+          this.alerta("Opa...", "Não foi encontrada uma empresa com esse código");
+        }
+      });
+    }
   }
-
-  
 
   alerta(titulo, msg) {
     this.alertCtrl.create({
