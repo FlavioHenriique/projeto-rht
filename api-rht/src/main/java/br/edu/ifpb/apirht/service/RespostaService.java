@@ -24,7 +24,7 @@ public class RespostaService {
     private EmpresaRepository empresaRepository;
 
     public void salvarResultado(Resposta resposta) {
-        empresaRepository.save(resposta.getEmpresa());
+        //empresaRepository.save(resposta.getEmpresa());
         repository.save(resposta);
     }
 

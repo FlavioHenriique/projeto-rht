@@ -16,12 +16,11 @@ public class QuestaoService {
     @Autowired
     private OpcaoRepository opcaoRepository;
 
-    public List<Questao> retornaTodas(){
+    public List<Questao> retornaTodas() {
         return repository.findAll();
     }
 
-    public void inserir(Questao questao){
-        opcaoRepository.saveAll(questao.getOpcoes());
-        repository.save(questao);
+    public void inserir(List<Questao> questoes) {
+        repository.saveAll(questoes);
     }
 }

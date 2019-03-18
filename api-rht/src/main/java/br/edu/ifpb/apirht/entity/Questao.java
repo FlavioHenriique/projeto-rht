@@ -9,8 +9,9 @@ public class Questao {
     @Id
     @GeneratedValue
     private int id;
+    @Column(length = 2000)
     private String pergunta;
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Opcao> opcoes;
     private int posicao;
 

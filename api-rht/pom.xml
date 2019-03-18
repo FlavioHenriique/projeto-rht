@@ -6,13 +6,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
     <groupId>br.edu.ifpb</groupId>
     <artifactId>api-rht</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>api-rht</name>
-    <description>Demo project for Spring Boot</description>
+    <description>API Rest para o aplicativo da disciplina de RHT</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -52,6 +52,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>
 
+        <finalName>api-rht</finalName>
+    </build>
 </project>

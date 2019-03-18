@@ -16,7 +16,7 @@ public class RespostaController {
 
     @Autowired
     private RespostaService service;
-
+    
     @PostMapping
     public ResponseEntity<Void> salvar(@RequestBody Resposta resposta) {
         service.salvarResultado(resposta);
@@ -24,7 +24,7 @@ public class RespostaController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Resposta>> todas() {
+    public ResponseEntity<List<Resposta>> todas(@PathVariable("empresa") int empresa) {
         List<Resposta> respostas = service.todas();
         return (respostas.isEmpty()) ? ResponseEntity.noContent().build() : ResponseEntity.ok(respostas);
     }

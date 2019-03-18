@@ -24,8 +24,8 @@ public class QuestaoController {
     }
 
     @PostMapping
-    public ResponseEntity<Void> salvar(@RequestBody Questao questao){
-        service.inserir(questao);
+    public ResponseEntity<Void> salvar(@RequestBody List<Questao> questoes){
+        service.inserir(questoes);
         return ResponseEntity.ok().build();
     }
 }

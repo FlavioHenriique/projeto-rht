@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Resposta {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
     private Empresa empresa;

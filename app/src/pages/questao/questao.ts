@@ -118,4 +118,7 @@ export class QuestaoPage {
     return "Segundo suas respostas, a estratégia de resolução de conflito "
       + "na qual você se encaixa é a " + resultado + "!";
   }
+
+  
+  
 }

@@ -7,7 +7,7 @@ import { HomePage } from '../home/home';
 import { HttpClient } from '@angular/common/http';
 import { Grafico } from '../../model/Grafico';
 
-//HighchartsMore(HighCharts);
+HighchartsMore(HighCharts);
 
 @IonicPage()
 @Component({
@@ -17,17 +17,23 @@ import { Grafico } from '../../model/Grafico';
 export class GraficoPage {
   private empresa: Empresa = null;
   private url: string = "http://localhost:8085/respostas/grafico/";
+  private myChart = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpClient) {
     this.empresa = navParams.get("empresa");
   }
 
+  ionViewDidLeave(){
+    this.myChart = null;
+  }
+
   ionViewDidLoad() {
     let busca = this.url + this.empresa.codigo;
+    
     var json;
     this.http.get(busca, { observe: 'response' }).subscribe(res => {
       if (res.status == 200) {
-        var myChart = HighCharts.chart('container', {
+         this.myChart = HighCharts.chart('container', {
           chart: {
             polar: true,
             marginBottom: 70
@@ -73,11 +79,8 @@ export class GraficoPage {
 
   }
 
-  spiderweb(body) {
-
-  }
 
   home() {
-    this.navCtrl.push(HomePage, {});
+    this.navCtrl.popToRoot();
   }
 }

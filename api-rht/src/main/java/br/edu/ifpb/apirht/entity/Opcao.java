@@ -8,6 +8,7 @@ public class Opcao {
     @Id
     @GeneratedValue
     private int id;
+    @Column(length = 2000)
     private String texto;
     @Enumerated(EnumType.STRING)
     private Estrategia estrategia;

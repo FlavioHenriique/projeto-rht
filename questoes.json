@@ -1,0 +1,99 @@
+[{
+	"pergunta":"Imagine que você é o gerente do setor financeiro de uma empresa. Você e sua equipe tem a tarefa de tomar ou não uma decisão nas próximas 3 horas, decisão essa que irá afetar diretamente nos lucros da empresa. Você acredita que a mesma deve ser tomada, pois a longo prazo irá trazer benefícios, porém toda a sua equipe é contra esta decisão. Neste caso, qual seria sua atitude?",
+	"posicao":"1",
+	"opcoes":[
+{"texto":" Tomar a decisão sem levar em consideração a opinião e interesses dos outros, pois sou o responsável pela equipe. ","estrategia":"COMPETIÇÃO"},
+{"texto":" Pelo fato de a equipe toda ser contra a decisão, ela não será tomada, preservando o bom relacionamento entre os membros.","estrategia":"ACOMODAÇÃO"},	
+	{"texto":" Deixar a equipe tomar a decisão sem participar dela.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Tentar conciliar a minha visão com a da equipe para tomar a decisão.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Como a situação exige uma decisão urgente, fazer acordos temporariamente com a equipe.","estrategia":"CONCESSÃO"}
+	
+]
+},
+
+{
+	"pergunta":"Você é o presidente de uma empresa e um de seus funcionários recusa-se a realizar uma tarefa que você o designou para fazer. Neste caso, qual sua atitude?",
+	"posicao":"2",
+	"opcoes":[
+{"texto":" Punir o funcionário, pois eu sou o seu chefe e ele deve fazer o que lhe for designado, sem questionamentos.","estrategia":"COMPETIÇÃO"},
+	{"texto":" Conversar com ele para que me explique seus motivos e juntos pensemos em outra pessoa.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Designar outra pessoa para realizar a tarefa, porém delegando alguma tarefa desta pessoa para o funcionário.","estrategia":"CONCESSÃO"},
+	{"texto":" Deixar este caso passar, como se não tivesse acontecido.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Ele deve ter um motivo para recusar, portanto irei designar a tarefa para outra pessoa.","estrategia":"ACOMODAÇÃO"}
+]
+},
+
+{
+	"pergunta":"Você foi promovido recentemente como o chefe do setor de uma empresa, responsável por definir quais serão as atividades realizadas naquele setor. Vários dos seus funcionários constantemente têm questionado suas ações e dado sugestões sempre que você define algo. Neste caso, o que você faria?",
+	"posicao":"3",
+	"opcoes":[
+{"texto":" Advertir os funcionários, pois você é o chefe e não deve receber este tipo de questionamento.","estrategia":"COMPETIÇÃO"},
+	{"texto":" Conversar com todos para que as atitudes tomadas possam agradar ambos os lados.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Tomar algumas decisões de acordo com as sugestões deles, mas não todas.","estrategia":"CONCESSÃO"},
+	{"texto":" Fingir que não está percebendo a insatisfação dos funcionários, esperando que ela seja passageira.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Mudar suas atitudes de acordo com a vontade dos funcionários.","estrategia":"ACOMODAÇÃO"}
+]
+},
+
+
+{
+	"pergunta":"Você faz parte de uma equipe de 20 funcionários de uma empresa. Um de seus colegas trabalha no turno da noite e pede a você que o substitua por um dia em seu turno para que ele possa comparecer a um compromisso muito importante. Você trabalhou o dia todo, serão algumas horas a mais de trabalho. Neste caso, qual seria sua atitude?",
+	"posicao":"4",
+	"opcoes":[
+{"texto":"  Recusar, pois já trabalhei o dia todo. ","estrategia":"COMPETIÇÃO"},
+	{"texto":" Ajudá-lo a pensar em outra pessoa que esteja em melhores condições para substituí-lo.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Aceitar, porém combinar com ele para que faça o mesmo quando eu precisar de sua ajuda.","estrategia":"CONCESSÃO"},
+	{"texto":" Não dar uma resposta.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Aceitar, pois o compromisso é muito importante para ele.","estrategia":"ACOMODAÇÃO"}
+]
+},
+
+{
+	"pergunta":"Um de seus colegas de trabalho foi designado junto a você para realizar uma tarefa com prazo para entrega. Porém, ele constantemente chega atrasado nas suas reuniões e não tem feito a sua parte do trabalho. Nesta situação, o que você faria?",
+	"posicao":"5",
+	"opcoes":[
+{"texto":"  Contar o que está acontecendo ao seu chefe, para que você não seja penalizado por não conseguirem entregar a tarefa a tempo.","estrategia":"COMPETIÇÃO"},
+	{"texto":" Conversar com ele, tentando achar outra pessoa para a tarefa.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Fazer todo o trabalho, porém ele irá fazer a mesma coisa para você em uma próxima vez.","estrategia":"CONCESSÃO"},
+	{"texto":" Não dar uma resposta.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Talvez ele tenha um bom motivo para estar tão disperso, então é melhor fazer todo o trabalho sozinho.","estrategia":"ACOMODAÇÃO"}
+]
+},
+
+
+{
+	"pergunta":"Você é um vendedor de uma distribuidora de bebidas. Seu chefe decide colocar você em uma equipe que irá realizar uma viagem de 1 semana para fora do estado sem consultar você antes. Você já havia definido que usar alguns dias de folga disponíveis durante essa semana. Neste caso, qual sua atitude?",
+	"posicao":"6",
+	"opcoes":[
+{"texto":"  Recusar, pois já decidi que tiraria os dias de folga.","estrategia":"COMPETIÇÃO"},
+	{"texto":" Tirar os dias de folga e combinar com ele para participar de outra viagem.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Aceitar, porém deixando claro que irei tirar meus dias de folga nos dias que eu desejar, sem a interferência dele.","estrategia":"CONCESSÃO"},
+	{"texto":" Não dar uma resposta, apenas esperar um possível pronunciamento do meu chefe.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Aceitar, pois ele é meu chefe e não devo reclamar de suas atitudes.","estrategia":"ACOMODAÇÃO"}
+]
+},
+
+
+{
+	"pergunta":"Alguns funcionários do seu setor foram demitidos pelo seu chefe, porém sem motivos aparentes. Você sabe que aqueles funcionários não fizeram nada para serem demitidos, além dos mesmos serem essenciais para o seu trabalho na empresa. Neste caso, o que você faria?",
+	"posicao":"8",
+	"opcoes":[
+{"texto":" Questioná-lo e tentar convencê-lo de voltar atrás a todo custo, mesmo sem saber qual foi o motivo que o fez tomar essa decisão.","estrategia":"COMPETIÇÃO"},
+	{"texto":" Não questionar a sua decisão, porém tentar mostrar como aqueles funcionários eram bons, de modo que ele reflita sobre sua decisão.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Aceitar, porém convencê-lo a realocar pessoas que você acha que seriam boas substitutas para os que foram demitidos, de modo que não impacte no seu trabalho.","estrategia":"CONCESSÃO"},
+	{"texto":" Ficar calado e não se envolver.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Aceitar, pois ele é meu chefe e não devo reclamar de suas atitudes.","estrategia":"ACOMODAÇÃO"}
+]
+},
+{
+	"pergunta":"Você chegou atrasado em um dia no seu trabalho e seu chefe não se mostrou nada contente. Por causa desse atraso, ele resolveu descontar do seu salário. Porém, você é um funcionário que nunca se atrasa e sempre cumpre com suas metas. Neste caso, o que você faria?",
+	"posicao":"7",
+	"opcoes":[
+{"texto":" Entrar em conflito com ele até que o mesmo volte na sua decisão, pois você não merece essa punição.","estrategia":"COMPETIÇÃO"},
+	{"texto":" Conversar com ele, mostrando seus motivos e lembrando-o de como você tem sido um bom funcionário, de modo que ele volte atrás na sua decisão.","estrategia":"COLABORAÇÃO"},
+	{"texto":" Aceitar, porém deixar de fazer algumas de suas tarefas. ","estrategia":"CONCESSÃO"},
+	{"texto":" Deixar este caso passar, mesmo não concordando.","estrategia":"NÃO_ENFRENTAMENTO"},
+	{"texto":" Aceitar, pois ele é meu chefe e não devo reclamar de suas atitudes.","estrategia":"ACOMODAÇÃO"}
+]
+}
+]
